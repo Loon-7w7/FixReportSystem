@@ -2,13 +2,18 @@
 
 @{
     ViewData["Title"] = "Signup";
+    Layout = "_loginsing";
 }
 
-<h1>Signup</h1>
 
-<h4>User</h4>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE-edge">
+    <meta name="viewport" content="width-device-width, initial-scale-1.0">
+    <link rel="stylesheet" href="/css/Diseños layaout/diesño formularios/estiloformulario.css">
+</head>
 <hr />
-<div class="row">
+@*<div class="row">
     <div class="col-md-4">
         <form asp-action="Signup">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
@@ -28,22 +33,42 @@
                 <span asp-validation-for="Password" class="text-danger"></span>
             </div>
 
-            @*<div class="form-group">
-                <label asp-for="ConfirmPassword" class="control-label"></label>
-                <input asp-for="ConfirmPassword" class="form-control" />
-                <span asp-validation-for="ConfirmPassword" class="text-danger"></span>
-            </div>*@
-
             <div class="form-group">
                 <input type="submit" value="Create" class="btn btn-primary" />
             </div>
         </form>
     </div>
+</div>*@
+
+
+
+@*<div>
+    <a asp-action="Index">Back to List</a>
+</div>*@
+
+<div class="formulario">
+    <h1>Registro</h1>
+    <form method="post">
+        <div class="Username">
+            <input type="text" required asp-for="UserName">
+            <label asp-for="UserName">Nombre de Usuario</label>
+        </div>
+        <div class="Username">
+            <input type="text" required asp-for="Email">
+            <label asp-for="Email">Email</label>
+        </div>
+        <div class="Username">
+            <input type="password" required asp-for="Password">
+            <label asp-for="Password">Contraseña</label>
+        </div>
+        <input type="submit" value="Create">
+        <div class="registrarse">
+            <a asp-action="Login">Regresar</a>
+        </div>
+        <br />
+    </form>
 </div>
 
-<div>
-    <a asp-action="Index">Back to List</a>
-</div>
 
 @section Scripts {
     @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}

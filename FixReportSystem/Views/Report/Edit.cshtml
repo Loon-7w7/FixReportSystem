@@ -4,11 +4,13 @@
     ViewData["Title"] = "Create";
 }
 
-<h1>Edit</h1>
-
-<h4>Report</h4>
-<hr />
-<div class="row">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE-edge">
+    <meta name="viewport" content="width-device-width, initial-scale-1.0">
+    <link rel="stylesheet" href="/css/Diseños layaout/diesño formularios/estiloformulariocrear.css">
+</head>
+@*<div class="row">
     <div class="col-md-4">
         <form asp-action="Edit">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
@@ -74,6 +76,68 @@
 
 <div>
     <a asp-action="Index">Back to List</a>
+</div>*@
+
+<div class="formulario">
+    <h1>Crear Reporte</h1>
+    <form method="post">
+        <div class="Username">
+            <input type="text" required asp-for="Name">
+            <label asp-for="Name">Nombre</label>
+        </div>
+        <div class="Username">
+            <input type="text" required asp-for="LastName">
+            <label asp-for="LastName">Apellido</label>
+        </div>
+        <div class="Username">
+            <input type="text" required asp-for="Building">
+            <label asp-for="Building">Edificio</label>
+        </div>
+        <div class="Username">
+            <input type="text" required asp-for="Classroom">
+            <label asp-for="Classroom">Aula</label>
+        </div>
+        <div class="Username">
+            <input type="text" required asp-for="Furniture">
+            <label asp-for="Furniture">Mobiliario</label>
+        </div>
+        <div class="Username">
+            <input type="text" required asp-for="Email">
+            <label asp-for="Email">Correo</label>
+        </div>
+        <div class="Username">
+            <input type="text" required asp-for="HeadCngineeringCourse">
+            <label asp-for="HeadCngineeringCourse">Jefe De Carrera</label>
+        </div>
+        <div class="form-group form-check">
+            <label class="form-check-label">
+                <input class="form-check-input" asp-for="FurnitureOrClaim" /> Reclamacion
+            </label>
+        </div>
+        <div class="Username">
+            <textarea type="text" required asp-for="ReportDescription"></textarea>
+            <label asp-for="ReportDescription">Descripcion de reporte</label>
+
+
+        </div>
+        <div class="form-group " style="display: none">
+            @*<label asp-for="UserId" class="control-label">Usuario</label>
+        <select asp-for="UserId" class="form-control" asp-items="ViewBag.UserId"></select>*@
+
+            <label asp-for="UserId" class="control-label">Usuario ID</label>
+            <input asp-for="UserId" class="form-control" />
+            <span asp-validation-for="UserId" class="text-danger"></span>
+            <input type="hidden" asp-for="ReportId" />
+        </div>
+
+
+        <input type="submit" value="Editar">
+        <div class="registrarse">
+            <a asp-action="ViewList">Regresar</a>
+
+        </div>
+        <br />
+    </form>
 </div>
 
 @section Scripts {

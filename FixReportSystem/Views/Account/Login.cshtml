@@ -2,13 +2,16 @@
 
 @{
     ViewData["Title"] = "Login";
+    Layout = "_loginsing";
 }
 
-<h1>Login</h1>
-
-<h4>User</h4>
-<hr />
-<div class="row">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE-edge">
+    <meta name="viewport" content="width-device-width, initial-scale-1.0">
+    <link rel="stylesheet" href="/css/Diseños layaout/diesño formularios/estiloformulario.css">
+</head>
+<!--<div class="row">
     <div class="col-md-4">
         <form asp-action="Login">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
@@ -23,26 +26,45 @@
                 <label asp-for="Email" class="control-label"></label>
                 <input asp-for="Email" class="form-control" />
                 <span asp-validation-for="Email" class="text-danger"></span>
-            </div>
+            </div>-->
 
             @*<div class="form-group">
-                <label asp-for="Password" class="control-label"></label>
-                <input asp-for="Password" class="form-control" />
-                <span asp-validation-for="Password" class="text-danger"></span>
-            </div>*@
+                    <label asp-for="Password" class="control-label" ></label>
+                    <input asp-for="Password" class="form-control " />
+                    <span asp-validation-for="Password" class="text-danger"></span>
+                </div>*@
 
-            <div class="form-group">
+            <!--<div class="form-group">
                 <input type="submit" value="Login" class="btn btn-primary" />
             </div>
             <a asp-action="Signup">Registrar</a>
         </form>
     </div>
-</div>
+</div>-->
 
-<div>
+@*<div>
     <a asp-action="Index">Back to List</a>
+</div>*@
+
+<div class="formulario">
+    <h1>Inicio de Seseion</h1>
+    <form method="post">
+        <div class="Username">
+            <input type="text" asp-for="UserName" required>
+            <label asp-for="UserName">Nombre de Usuario</label>
+        </div>
+        <div class="Username">
+            <input type="email" asp-for="Email" required>
+            <label asp-for="Email">Email</label>
+        </div>
+        <div class="Recordar"><a href="#">¿Olvideo su Contraseña?</a></div>
+        <input type="submit" value="Login">
+        <div class="registrarse">
+            Quiero hacer el <a asp-action="Signup">Resgistro</a>
+        </div>
+    </form>
 </div>
 
 @*@section Scripts {
-    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
-}*@
+        @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+    }*@

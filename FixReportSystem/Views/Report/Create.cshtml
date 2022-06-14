@@ -4,75 +4,134 @@
     ViewData["Title"] = "Create";
 }
 
-<h1>Create</h1>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE-edge">
+    <meta name="viewport" content="width-device-width, initial-scale-1.0">
+    <link rel="stylesheet" href="/css/Diseños layaout/diesño formularios/estiloformulariocrear.css">
+</head>
+@*<div class="row">
+        <div class="col-md-4">
+            <form asp-action="Create">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
 
-<h4>Report</h4>
-<hr />
-<div class="row">
-    <div class="col-md-4">
-        <form asp-action="Create">
-            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            
-            <div class="form-group">
-                <label asp-for="Name" class="control-label"></label>
-                <input asp-for="Name" class="form-control" />
-                <span asp-validation-for="Name" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="LastName" class="control-label"></label>
-                <input asp-for="LastName" class="form-control" />
-                <span asp-validation-for="LastName" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Building" class="control-label"></label>
-                <input asp-for="Building" class="form-control" />
-                <span asp-validation-for="Building" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Classroom" class="control-label"></label>
-                <input asp-for="Classroom" class="form-control" />
-                <span asp-validation-for="Classroom" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Furniture" class="control-label"></label>
-                <input asp-for="Furniture" class="form-control" />
-                <span asp-validation-for="Furniture" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Email" class="control-label"></label>
-                <input asp-for="Email" class="form-control" />
-                <span asp-validation-for="Email" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="HeadCngineeringCourse" class="control-label"></label>
-                <input asp-for="HeadCngineeringCourse" class="form-control" />
-                <span asp-validation-for="HeadCngineeringCourse" class="text-danger"></span>
-            </div>
-            <div class="form-group form-check">
-                <label class="form-check-label">
-                    <input class="form-check-input" asp-for="FurnitureOrClaim" /> @Html.DisplayNameFor(model => model.FurnitureOrClaim)
-                </label>
-            </div>
-            <div class="form-group">
-                <label asp-for="ReportDescription" class="control-label"></label>
-                <input asp-for="ReportDescription" class="form-control" />
-                <span asp-validation-for="ReportDescription" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="UserId" class="control-label"></label>
-                <select asp-for="UserId" class ="form-control" asp-items="ViewBag.UserId" ></select>
-            </div>
+                <div class="form-group">
+                    <label asp-for="Name" class="control-label"></label>
+                    <input asp-for="Name" class="form-control" />
+                    <span asp-validation-for="Name" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="LastName" class="control-label"></label>
+                    <input asp-for="LastName" class="form-control" />
+                    <span asp-validation-for="LastName" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Building" class="control-label"></label>
+                    <input asp-for="Building" class="form-control" />
+                    <span asp-validation-for="Building" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Classroom" class="control-label"></label>
+                    <input asp-for="Classroom" class="form-control" />
+                    <span asp-validation-for="Classroom" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Furniture" class="control-label"></label>
+                    <input asp-for="Furniture" class="form-control" />
+                    <span asp-validation-for="Furniture" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Email" class="control-label"></label>
+                    <input asp-for="Email" class="form-control" />
+                    <span asp-validation-for="Email" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="HeadCngineeringCourse" class="control-label"></label>
+                    <input asp-for="HeadCngineeringCourse" class="form-control" />
+                    <span asp-validation-for="HeadCngineeringCourse" class="text-danger"></span>
+                </div>
+                <div class="form-group form-check">
+                    <label class="form-check-label">
+                        <input class="form-check-input" asp-for="FurnitureOrClaim" /> @Html.DisplayNameFor(model => model.FurnitureOrClaim)
+                    </label>
+                </div>
+                <div class="form-group">
+                    <label asp-for="ReportDescription" class="control-label"></label>
+                    <input asp-for="ReportDescription" class="form-control" />
+                    <span asp-validation-for="ReportDescription" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="UserId" class="control-label"></label>
+                    <select asp-for="UserId" class="form-control" asp-items="ViewBag.UserId"></select>
+                </div>
 
-            <div class="form-group">
-                <input type="submit" value="Create" class="btn btn-primary" />
-            </div>
-        </form>
-    </div>
+                <div class="form-group">
+                    <input type="submit" value="Create" class="btn btn-primary" />
+                </div>
+            </form>
+        </div>
+    </div>*@
+
+<div class="formulario">
+    <h1>Crear Reporte</h1>
+    <form method="post">
+        <div class="Username">
+            <input type="text" required asp-for="Name">
+            <label asp-for="Name">Nombre</label>
+        </div>
+        <div class="Username">
+            <input type="text" required asp-for="LastName">
+            <label asp-for="LastName">Apellido</label>
+        </div>
+        <div class="Username">
+            <input type="text" required asp-for="Building">
+            <label asp-for="Building">Edificio</label>
+        </div>
+        <div class="Username">
+            <input type="text" required asp-for="Classroom">
+            <label asp-for="Classroom">Aula</label>
+        </div>
+        <div class="Username">
+            <input type="text" required asp-for="Furniture">
+            <label asp-for="Furniture">Mobiliario</label>
+        </div>
+        <div class="Username">
+            <input type="text" required asp-for="Email">
+            <label asp-for="Email">Correo</label>
+        </div>
+        <div class="Username">
+            <input type="text" required asp-for="HeadCngineeringCourse">
+            <label asp-for="HeadCngineeringCourse">Jefe De Carrera</label>
+        </div>
+        <div class="form-group form-check">
+            <label class="form-check-label">
+                <input class="form-check-input" asp-for="FurnitureOrClaim" /> Reclamacion
+            </label>
+        </div>
+        <div class="Username">
+            <textarea type="text" required asp-for="ReportDescription"></textarea>
+            <label asp-for="ReportDescription">Descripcion de reporte</label>
+
+
+        </div>
+        <div class="form-group">
+            <label asp-for="UserId" class="control-label">Usuario</label>
+            <select asp-for="UserId" class="form-control" asp-items="ViewBag.UserId"></select>
+        </div>
+
+
+        <input type="submit" value="Create">
+        <div class="registrarse">
+            <a asp-action="ViewList">Regresar</a>
+
+        </div>
+        <br />
+    </form>
 </div>
 
-<div>
+@*<div>
     <a asp-action="Index">Back to List</a>
-</div>
+</div>*@
 
 @section Scripts {
     @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
