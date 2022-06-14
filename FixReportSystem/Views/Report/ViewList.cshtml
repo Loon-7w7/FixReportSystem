@@ -4,45 +4,49 @@
     ViewData["Title"] = "View";
 }
 
-<h1>View</h1>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Header responsive</title>
+    <link href="/css/Diseños layaout/EstiloBody.scss" rel="stylesheet" />
+</head>
+
+<h1>Lista De Reportes</h1>
 
 <p>
-    <a asp-action="Create">Create New</a>
+    <a asp-action="Create" class="btn btn-outline-success">Crear Reporte</a>
 </p>
-<table class="table">
+<table class="table table-striped">
     <thead>
-        <tr>
+        <tr class="Titulos">
             <th>
-                @Html.DisplayNameFor(model => model.Name)
+                Nombre
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.LastName)
+                Apellido
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Building)
+                Edificio
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Classroom)
+                Aula 
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Furniture)
+                Mobiliario
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Email)
+                Correo
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.HeadCngineeringCourse)
+                Jefe De Carrera
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.FurnitureOrClaim)
+                Reclamacion
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.ReportDescription)
+                Descripcion de reporte
             </th>
-            <th>
-                @Html.DisplayNameFor(model => model.User)
-            </th>
-            <th></th>
         </tr>
     </thead>
     <tbody>
@@ -78,11 +82,12 @@
             <td>
                 @Html.DisplayFor(modelItem => item.User.UserId)
             </td>
-            <td>
-                <a asp-action="Index" asp-route-id="@item.ReportId">Details</a>
-                <a asp-action="Delete" asp-route-id="@item.ReportId">Delete</a>
-                <a asp-action="Edit" asp-route-id="@item.ReportId">Edit</a>
-            </td>
+            <th>
+                <a asp-action="Index" asp-route-id="@item.ReportId" class="btn btn-outline-primary btn-sm">Details</a>
+                <a asp-action="Edit" asp-route-id="@item.ReportId" class="btn btn-outline-success btn-sm">Edit</a>
+                <a asp-action="Delete" asp-route-id="@item.ReportId" class="btn btn-outline-danger btn-sm">Delete</a>
+
+            </th>
         </tr>
 }
     </tbody>

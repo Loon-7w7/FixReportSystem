@@ -1,0 +1,21 @@
+.rwd-table {
+    background-color:white;
+    text-align:left;
+    border-collapse:collapse;
+    width:100%;
+}
+th, td {
+    padding: 20px;
+}
+thead
+{
+    background-color: #00ffff;
+    border-bottom:solid 5px #bbd9dc;
+    color:#464646;
+}
+tr:nth-child(even) {
+    background-color:#ddd;
+}
+tr:hover td{
+    background-color:#27d1dc;
+}

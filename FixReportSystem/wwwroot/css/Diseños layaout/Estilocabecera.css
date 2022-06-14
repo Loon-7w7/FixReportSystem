@@ -1,7 +1,7 @@
 body {
   margin: 0;
   font-family: consolas;
-  background-color: rgb(212, 212, 212);
+
 }
 
 .header {
@@ -81,3 +81,5 @@ body {
     display: none;
   }
 }
+
+

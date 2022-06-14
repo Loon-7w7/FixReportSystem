@@ -8,45 +8,65 @@
 
 <h3>Are you sure you want to delete this?</h3>
 <div>
-    <h4>Report</h4>
     <hr />
-    <dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayNameFor(model => model.ReportId)
+    <h4>Report De  @Html.DisplayFor(model => model.Furniture)</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            Nombre
         </dt>
-        <dd>
+        <dd class="col-sm-10">
             @Html.DisplayFor(model => model.Name)
         </dd>
-        <dt>
-            @Html.DisplayNameFor(model => model.LastName)
+        <dt class="col-sm-2">
+            Apellido
         </dt>
-        <dd>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.LastName)
+        </dd>
+        <dt class="col-sm-2">
+            Edificio
+        </dt>
+        <dd class="col-sm-10">
             @Html.DisplayFor(model => model.Building)
         </dd>
-        <dt>
-            @Html.DisplayNameFor(model => model.Classroom)
+        <dt class="col-sm-2">
+            Aula
         </dt>
-        <dd>
-            @Html.DisplayNameFor(model => model.Furniture)
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Classroom)
         </dd>
-        <dt>
-            @Html.DisplayNameFor(model => model.Email)
+        <dt class="col-sm-2">
+            Mobiliario
         </dt>
-        <dd>
-            @Html.DisplayNameFor(model => model.HeadCngineeringCourse)
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Furniture)
         </dd>
-        <dt>
-            @Html.DisplayNameFor(model => model.FurnitureOrClaim)
+        <dt class="col-sm-2">
+            Correo
         </dt>
-        <dd>
-            @Html.DisplayNameFor(model => model.ReportDescription)
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Email)
         </dd>
-        <dt>
-            @Html.DisplayNameFor(model => model.UserId)
+        <dt class="col-sm-2">
+            Jefe De Carrera
         </dt>
-        <dd>
-            @Html.DisplayNameFor(model => model.User)
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.HeadCngineeringCourse)
         </dd>
+        <dt class="col-sm-2">
+            Reclamacion
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.FurnitureOrClaim)
+        </dd>
+        <dt class="col-sm-2">
+            Descripcion de reporte
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ReportDescription)
+        </dd>
+
     </dl>
     
     <form asp-action="Delete">
