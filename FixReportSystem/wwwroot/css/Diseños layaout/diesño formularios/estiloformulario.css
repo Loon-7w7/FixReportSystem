@@ -48,8 +48,7 @@ form .Username
     background: none;
     outline: none;
 }
-.Username label
-{
+.Username label {
     position: absolute;
     top: 50%;
     left: 5px;
@@ -58,6 +57,7 @@ form .Username
     font-size: 16px;
     pointer-events: none;
     transition: .5s;
+    top: -5px;
 }
 .Username span::before
 {
