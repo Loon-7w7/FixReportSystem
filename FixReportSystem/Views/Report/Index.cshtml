@@ -11,6 +11,14 @@
         <h4>Reporte de @Html.DisplayFor(model => model.Furniture)</h4>
         <hr />
         <dl class="row">
+
+            <dt class="col-sm-2">
+                <h5><i>Encargado</i></h5>
+            </dt>
+            <dd class = "col-sm-10">
+                ----------
+            </dd>
+
             <dt class="col-sm-2">
                 Nombre
             </dt>
@@ -23,6 +31,20 @@
             <dd class = "col-sm-10">
                 @Html.DisplayFor(model => model.LastName)
             </dd>
+            <dt class="col-sm-2">
+                Correo
+            </dt>
+            <dd class = "col-sm-10">
+                @Html.DisplayFor(model => model.Email)
+            </dd>
+
+            <dt class="col-sm-2">
+                <h5><i>Mobiliario</i></h5>
+            </dt>
+            <dd class = "col-sm-10">
+                ----------
+            </dd>
+
             <dt class="col-sm-2">
                 Edificio
             </dt>
@@ -40,14 +62,7 @@
             </dt>
             <dd class = "col-sm-10">
                 @Html.DisplayFor(model => model.Furniture)
-            </dd>
-            <dt class="col-sm-2">
-                Correo
-            </dt>
-            <dd class = "col-sm-10">
-                @Html.DisplayFor(model => model.Email)
-            </dd>
-            <dt class="col-sm-2">
+            </dd>            <dt class="col-sm-2">
                 Jefe De Carrera
             </dt>
             <dd class = "col-sm-10">
@@ -70,7 +85,7 @@
     </div>
 
     <div>
-        <input class="btn btn-outline-success btn-sm" type="button" value="Imprime esta pagina" onclick="window.print()">
+        <input class="btn btn-outline-success btn-sm" type="button" value="Imprimir reporte" onclick="window.print()">
         <a asp-action="ViewList">Regresar</a>
     </div>
 </div>

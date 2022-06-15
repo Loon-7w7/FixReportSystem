@@ -48,26 +48,33 @@
 
 
 <div class="formulario">
-    <h1>Inicio de Seseion</h1>
+    <h1>Inicio de Sesion</h1>
     <form method="post" asp-action="Login">
         <div asp-validation-summary="ModelOnly" class="text-danger"></div>
 
-        <div class="Username">
+        @*<div class="Username">
             <input type="text" asp-for="UserName" required>
             <label asp-for="UserName">Nombre de Usuario</label>
-        </div>
+        </div>*@
 
         <div class="Username">
             <input type="email" asp-for="Email" required>
             <label asp-for="Email">Email</label>
         </div>
 
+        <div class="Username">
+            <input type="password" asp-for="Password" required>
+            <label asp-for="Password">Contraseña</label>
+        </div>
+
+        <p class="text-danger">@ViewBag.DynamicThing</p>
+
         @*<div class="Recordar"><a href="#">¿Olvideo su Contraseña?</a></div>*@
 
         <input type="submit" value="Login">
 
         <div class="registrarse">
-            Quiero hacer el <a asp-action="Signup">Resgistro</a>
+            Quiero hacer el <a asp-action="Signup">Registro</a>
         </div>
     </form>
 </div>

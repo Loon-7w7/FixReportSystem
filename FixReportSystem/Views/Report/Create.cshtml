@@ -78,11 +78,15 @@
         <div asp-validation-summary="ModelOnly" class="text-danger"></div>
         <div class="Username">
             <input type="text" required asp-for="Name">
-            <label asp-for="Name">Nombre</label>
+            <label asp-for="Name">Nombre del encargado</label>
         </div>
         <div class="Username">
             <input type="text" required asp-for="LastName">
-            <label asp-for="LastName">Apellido</label>
+            <label asp-for="LastName">Apellido del encargado</label>
+        </div>
+        <div class="Username">
+            <input type="text" required asp-for="Email">
+            <label asp-for="Email">Correo</label>
         </div>
         <div class="Username">
             <input type="text" required asp-for="Building">
@@ -94,11 +98,7 @@
         </div>
         <div class="Username">
             <input type="text" required asp-for="Furniture">
-            <label asp-for="Furniture">Mobiliario</label>
-        </div>
-        <div class="Username">
-            <input type="text" required asp-for="Email">
-            <label asp-for="Email">Correo</label>
+            <label asp-for="Furniture">Mobiliario a reportar</label>
         </div>
         <div class="Username">
             <input type="text" required asp-for="HeadCngineeringCourse">
@@ -112,16 +112,16 @@
         <div class="Username">
             <textarea type="text" required asp-for="ReportDescription"></textarea>
             <label asp-for="ReportDescription">Descripcion de reporte</label>
-
-
         </div>
         <div class="form-group">
             <label asp-for="UserId" class="control-label">Usuario</label>
             <select asp-for="UserId" class="form-control" asp-items="ViewBag.UserId"></select>
         </div>
 
-
-        <input type="submit" value="Create">
+        <div class="container">
+            <input type="submit" value="Create">
+        </div>
+        
         <div class="registrarse">
             <a asp-action="ViewList">Regresar</a>
 

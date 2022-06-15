@@ -27,16 +27,19 @@ namespace FixReportSystem.Controllers
         }
 
         [HttpPost]
-        public IActionResult Login(string email, string userName)
+        public IActionResult Login(string email, string password)
         {
-            //ViewData["UserId"] = new SelectList(_context.Users, "Email", "UserName");
-            ViewBag.DynamicThing = $"Bienvenido {userName}!";
+            // De la tabla users selecciona el nombre donde el correo y la contrasenia sean igual a los parametros
+            var username = from usr in _context.Users
+                           where usr.Email == email && usr.Password == password
+                           select usr.UserName;
+            ViewBag.DynamicThing = $"Bienvenido {username.SingleOrDefault()}!";
 
             //sepa la vrga porque no me jala el email jsjsj
-            var user = _context.Users.Where(s => s.Email == email && s.UserName == userName);
+            var user = _context.Users.Where(s => s.Email == email && s.Password == password);
             if (user.Any())
             {
-                if (user.Where(s => s.Email == email && s.UserName == userName).Any())
+                if (user.Where(s => s.Email == email && s.Password == password).Any())
                 {
                     return View("index");
                 }
@@ -47,6 +50,7 @@ namespace FixReportSystem.Controllers
             }
             else
             {
+                ViewBag.DynamicThing = "Credenciales incorrectas";
                 return View();
             }
         }

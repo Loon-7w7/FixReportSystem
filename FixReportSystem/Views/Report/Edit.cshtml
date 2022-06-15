@@ -84,11 +84,15 @@
         <div asp-validation-summary="ModelOnly" class="text-danger"></div>
         <div class="Username">
             <input type="text" required asp-for="Name">
-            <label asp-for="Name">Nombre</label>
+            <label asp-for="Name">Nombre del encargado</label>
         </div>
         <div class="Username">
             <input type="text" required asp-for="LastName">
-            <label asp-for="LastName">Apellido</label>
+            <label asp-for="LastName">Apellido del encargado</label>
+        </div>
+        <div class="Username">
+            <input type="text" required asp-for="Email">
+            <label asp-for="Email">Correo</label>
         </div>
         <div class="Username">
             <input type="text" required asp-for="Building">
@@ -100,11 +104,7 @@
         </div>
         <div class="Username">
             <input type="text" required asp-for="Furniture">
-            <label asp-for="Furniture">Mobiliario</label>
-        </div>
-        <div class="Username">
-            <input type="text" required asp-for="Email">
-            <label asp-for="Email">Correo</label>
+            <label asp-for="Furniture">Mobiliario a reportar</label>
         </div>
         <div class="Username">
             <input type="text" required asp-for="HeadCngineeringCourse">
@@ -131,8 +131,10 @@
             <input type="hidden" asp-for="ReportId" />
         </div>
 
-
-        <input type="submit" value="Editar">
+        <div class="container">
+            <input type="submit" value="Editar">
+        </div>
+        
         <div class="registrarse">
             <a asp-action="ViewList">Regresar</a>
 
