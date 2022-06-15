@@ -1,4 +1,8 @@
 # FixReportSystem
 ASP.NET Core (MVC)
 
-Sistemna de registro de reportes
+Sistema de registro de reportes
+
+>"Aplicacion web publicada"
+>Link: [Click aqui](http://fixreportsystem-001-site1.itempurl.com/)
+
