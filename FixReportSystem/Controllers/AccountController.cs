@@ -30,7 +30,7 @@ namespace FixReportSystem.Controllers
         public IActionResult Login(string email, string userName)
         {
             //ViewData["UserId"] = new SelectList(_context.Users, "Email", "UserName");
-            ViewBag.DynamicThing = userName;
+            ViewBag.DynamicThing = $"Bienvenido {userName}!";
 
             //sepa la vrga porque no me jala el email jsjsj
             var user = _context.Users.Where(s => s.Email == email && s.UserName == userName);
