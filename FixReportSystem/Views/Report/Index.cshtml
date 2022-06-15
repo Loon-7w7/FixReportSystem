@@ -4,71 +4,73 @@
     ViewData["Title"] = "Index";
 }
 
-<h1>Index</h1>
+<div class="container">
+    <h1>Detalles del reporte</h1>
 
-<div>
-    <h4>Report</h4>
-    <hr />
-    <dl class="row">
-        <dt class="col-sm-2">
-            Nombre
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Name)
-        </dd>
-        <dt class="col-sm-2">
-            Apellido
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.LastName)
-        </dd>
-        <dt class="col-sm-2">
-            Edificio
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Building)
-        </dd>
-        <dt class="col-sm-2">
-            Aula
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Classroom)
-        </dd>
-        <dt class="col-sm-2">
-            Mobiliario
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Furniture)
-        </dd>
-        <dt class="col-sm-2">
-            Correo
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Email)
-        </dd>
-        <dt class="col-sm-2">
-            Jefe De Carrera
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.HeadCngineeringCourse)
-        </dd>
-        <dt class="col-sm-2">
-            Reclamacion
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.FurnitureOrClaim)
-        </dd>
-        <dt class="col-sm-2">
-            Descripcion de reporte
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.ReportDescription)
-        </dd>
+    <div>
+        <h4>Reporte de @Html.DisplayFor(model => model.Furniture)</h4>
+        <hr />
+        <dl class="row">
+            <dt class="col-sm-2">
+                Nombre
+            </dt>
+            <dd class = "col-sm-10">
+                @Html.DisplayFor(model => model.Name)
+            </dd>
+            <dt class="col-sm-2">
+                Apellido
+            </dt>
+            <dd class = "col-sm-10">
+                @Html.DisplayFor(model => model.LastName)
+            </dd>
+            <dt class="col-sm-2">
+                Edificio
+            </dt>
+            <dd class = "col-sm-10">
+                @Html.DisplayFor(model => model.Building)
+            </dd>
+            <dt class="col-sm-2">
+                Aula
+            </dt>
+            <dd class = "col-sm-10">
+                @Html.DisplayFor(model => model.Classroom)
+            </dd>
+            <dt class="col-sm-2">
+                Mobiliario
+            </dt>
+            <dd class = "col-sm-10">
+                @Html.DisplayFor(model => model.Furniture)
+            </dd>
+            <dt class="col-sm-2">
+                Correo
+            </dt>
+            <dd class = "col-sm-10">
+                @Html.DisplayFor(model => model.Email)
+            </dd>
+            <dt class="col-sm-2">
+                Jefe De Carrera
+            </dt>
+            <dd class = "col-sm-10">
+                @Html.DisplayFor(model => model.HeadCngineeringCourse)
+            </dd>
+            <dt class="col-sm-2">
+                Reclamacion
+            </dt>
+            <dd class = "col-sm-10">
+                @Html.DisplayFor(model => model.FurnitureOrClaim)
+            </dd>
+            <dt class="col-sm-2">
+                Descripcion de reporte
+            </dt>
+            <dd class = "col-sm-10">
+                @Html.DisplayFor(model => model.ReportDescription)
+            </dd>
 
-    </dl>
-</div>
+        </dl>
+    </div>
 
-<div>
-    <input type="button" value="Imprime esta pagina" onclick="window.print()">
-    <a asp-action="ViewList">Back to List</a>
+    <div>
+        <input class="btn btn-outline-success btn-sm" type="button" value="Imprime esta pagina" onclick="window.print()">
+        <a asp-action="ViewList">Regresar</a>
+    </div>
 </div>

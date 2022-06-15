@@ -12,83 +12,68 @@
     <link href="/css/Diseños layaout/EstiloBody.scss" rel="stylesheet" />
 </head>
 
-<h1>Lista De Reportes</h1>
+<div class="container">
+    <h1>Lista De Reportes</h1>
 
-<p>
-    <a asp-action="Create" class="btn btn-outline-success">Crear Reporte</a>
-</p>
-<table class="table table-striped">
-    <thead>
-        <tr class="Titulos">
-            <th>
-                Nombre
-            </th>
-            <th>
-                Apellido
-            </th>
-            <th>
-                Edificio
-            </th>
-            <th>
-                Aula 
-            </th>
-            <th>
-                Mobiliario
-            </th>
-            <th>
-                Correo
-            </th>
-            <th>
-                Jefe De Carrera
-            </th>
-            <th>
-                Reclamacion
-            </th>
-            <th>
-                Descripcion de reporte
-            </th>
-        </tr>
-    </thead>
-    <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.Name)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.LastName)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Building)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Classroom)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Furniture)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Email)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.HeadCngineeringCourse)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.FurnitureOrClaim)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.ReportDescription)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.User.UserId)
-            </td>
-            <th>
-                <a asp-action="Index" asp-route-id="@item.ReportId" class="btn btn-outline-primary btn-sm">Details</a>
-                <a asp-action="Edit" asp-route-id="@item.ReportId" class="btn btn-outline-success btn-sm">Edit</a>
-                <a asp-action="Delete" asp-route-id="@item.ReportId" class="btn btn-outline-danger btn-sm">Delete</a>
+    <p>
+        <a asp-action="Create" class="btn btn-outline-success">Crear Reporte</a>
+    </p>
+    <table class="table table-striped">
+        <thead>
+            <tr class="Titulos">
+                <th>
+                    Nombre
+                </th>
+                <th>
+                    Apellido
+                </th>
+                <th>
+                    Mobiliario
+                </th>
+                <th>
+                    Correo
+                </th>
+                <th>
+                    Jefe De Carrera
+                </th>
+                <th>
+                    Reclamacion
+                </th>
+                <th>
+                    Acciones
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+    @foreach (var item in Model) {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Name)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.LastName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Furniture)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Email)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.HeadCngineeringCourse)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.FurnitureOrClaim)
+                </td>
+                <th>
+                    <a asp-action="Index" asp-route-id="@item.ReportId" class="btn btn-outline-primary btn-sm">Details</a>
+                    <a asp-action="Edit" asp-route-id="@item.ReportId" class="btn btn-outline-success btn-sm">Edit</a>
+                    <a asp-action="Delete" asp-route-id="@item.ReportId" class="btn btn-outline-danger btn-sm">Delete</a>
 
-            </th>
-        </tr>
-}
-    </tbody>
-</table>
+                </th>
+            </tr>
+    }
+        </tbody>
+    </table>
+
+</div>

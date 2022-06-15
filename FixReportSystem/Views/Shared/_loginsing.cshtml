@@ -8,8 +8,9 @@
     <link rel="stylesheet" href="~/css/site.css" />
     <link href="/css/Diseños layaout/Estilocabecera.css" rel="stylesheet" />
     <link href="/css/Diseños layaout/footer.css" rel="stylesheet" />
+    <link href="/css/Diseños layaout/diesño formularios/background.css" rel="stylesheet" />
 </head>
-<body>
+<body class="area">
     <header class="header">
         <div class="header-top">
             <h1 class="header-logo">FixReportSystem</h1>
@@ -20,6 +21,35 @@
             </ul>
         </nav>
     </header>
+
+    <ul class="circles">
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+     </ul>
+
+    @*<div class="area">
+        <ul class="circles">
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </div>*@
+
     <div class="container">
         <main role="main" class="pb-3">
             @RenderBody()
@@ -36,9 +66,9 @@
             <div class="footer-menus">
                 <div class="footer-content-container">
                     <span class="menu-title">menu</span>
-                    <a asp-area="" asp-controller="Account" asp-action="Index" class="menu-item-footer">Home</a>
-                    <a asp-area="" asp-controller="Report" asp-action="ViewList" class="menu-item-footer">Reports</a>
-                    <a asp-area="" asp-controller="Account" asp-action="Login" class="menu-item-footer">Logout</a>
+                    <a href="" class="menu-item-footer">Home</a>
+                    <a href="" class="menu-item-footer">Reports</a>
+                    <a href="" class="menu-item-footer">Logout</a>
                 </div>
                 <div class="footer-content-container">
                     <span class="menu-title">legal</span>

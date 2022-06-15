@@ -78,9 +78,10 @@
     <a asp-action="Index">Back to List</a>
 </div>*@
 
-<div class="formulario">
+<div class="formulario mt-5 pt-3 mb-5">
     <h1>Crear Reporte</h1>
-    <form method="post">
+    <form method="post" asp-action="Edit">
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
         <div class="Username">
             <input type="text" required asp-for="Name">
             <label asp-for="Name">Nombre</label>
